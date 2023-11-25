@@ -6,7 +6,6 @@ typedef struct node {
     struct node *next;
 } node;
 
-// Function to display the elements of the linked list
 void display(node *head) {
     printf("The elements are: ");
     while (head != NULL) {
@@ -16,7 +15,6 @@ void display(node *head) {
     printf("\n");
 }
 
-// Function to insert a new node at the beginning of the linked list
 node *insertAtStart(node *head, int data) {
     node *newNode = (node *)malloc(sizeof(node));
     newNode->data = data;
@@ -24,7 +22,6 @@ node *insertAtStart(node *head, int data) {
     return newNode;
 }
 
-// Function to insert a new node at the end of the linked list
 node *insertAtEnd(node *head, int data) {
     node *newNode = (node *)malloc(sizeof(node));
     newNode->data = data;
@@ -43,7 +40,6 @@ node *insertAtEnd(node *head, int data) {
     return head;
 }
 
-// Function to insert a new node at a specific position in the linked list
 node *insertAtPosition(node *head, int data, int position) {
     if (position < 0) {
         printf("Invalid position\n");
@@ -73,7 +69,6 @@ node *insertAtPosition(node *head, int data, int position) {
     return head;
 }
 
-// Function to delete the first node of the linked list
 node *deleteAtStart(node *head) {
     if (head == NULL) {
         printf("List is empty. Cannot delete.\n");
@@ -86,7 +81,6 @@ node *deleteAtStart(node *head) {
     return head;
 }
 
-// Function to delete the last node of the linked list
 node *deleteAtEnd(node *head) {
     if (head == NULL) {
         printf("List is empty. Cannot delete.\n");
@@ -108,7 +102,6 @@ node *deleteAtEnd(node *head) {
     return head;
 }
 
-// Function to delete a node at a specific position in the linked list
 node *deleteAtPosition(node *head, int position) {
     if (head == NULL || position < 0) {
         printf("Invalid operation\n");
